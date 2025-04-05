@@ -105,13 +105,13 @@ def convertir():
 root = tk.Tk()
 root.title("Calculadora de Subredes")
 
-tk.Label(root, text="Ingresa IP (opcional con /CIDR):", font=("Courier", 14)).pack(pady=5)
+tk.Label(root, text="Ingresa IP (opcional con /CIDR):").pack(pady=5)
 entry = tk.Entry(root, width=40)
 entry.pack(pady=5)
 
-tk.Button(root, text="Calcular", command=convertir, font=("Courier", 14)).pack(pady=5)
+tk.Button(root, text="Calcular", command=convertir,).pack(pady=5)
 
 output_var = tk.StringVar()
-tk.Label(root, textvariable=output_var, fg="blue", font=("Helvetica", 14), justify="left").pack(pady=10)
+tk.Label(root, textvariable=output_var, fg="blue", font=("Courier", 11), justify="left").pack(pady=10)
 
 root.mainloop()
