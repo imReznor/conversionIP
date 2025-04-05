@@ -1,0 +1,21 @@
+# Ignorar archivos de compilación de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignorar entorno virtual
+venv/
+env/
+
+# Ignorar archivos de configuración específicos del IDE
+.vscode/
+.idea/
+
+# Ignorar archivos de configuración de PyInstaller
+/build/
+/dist/
+
+# Ignorar otros archivos temporales o del sistema operativo
+*.log
+*.swp
