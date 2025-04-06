@@ -2,13 +2,20 @@ import tkinter as tk
 from tkinter import messagebox
 
 def validar_ip(ip):
-    partes = ip.split(".")
-    if len(partes) != 4:
-        return False
-    for parte in partes:
-        if not parte.isdigit() or not 0 <= int(parte) <= 255:
+    try:
+        partes = ip.strip().split(".")
+        if len(partes) != 4:
             return False
-    return True
+        for parte in partes:
+            if not parte.isdigit():
+                return False
+            valor = int(parte)
+            if not 0 <= valor <= 255:
+                return False
+        return True
+    except:
+        return False
+
 
 def validar_binario(bin_str):
     partes = bin_str.split(".")
